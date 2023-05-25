@@ -286,7 +286,7 @@ public void getSingleTodosValidParam(int id) {
     }
 
     @Step("Put update users with exceed parameter id")
-    public void putUpdateUsersExceed(File json, int id) {
+    public void putUpdateUsersWithExceedParameterID(File json, int id) {
         SerenityRest.given().pathParam("id", id)
                 .contentType(ContentType.JSON)
                 .body(json);
