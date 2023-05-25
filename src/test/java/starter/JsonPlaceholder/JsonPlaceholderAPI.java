@@ -176,6 +176,8 @@ public void getSingleTodosValidParam(int id) {
     }
     @Step("Delete Todos with exceed id")
     public void deleteTodosExceedId(int id) {
+        SerenityRest.given().pathParam("id",id);
+    }
 
     //Get single photos
     @Step("Get photos with valid parameter ID")
@@ -225,7 +227,3 @@ public void getSingleTodosValidParam(int id) {
         SerenityRest.given().pathParam("id", id);
     }
 }
-
-
-
-
