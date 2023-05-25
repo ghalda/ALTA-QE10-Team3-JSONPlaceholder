@@ -6,4 +6,7 @@ public class JsonPlaceholderResponse {
     public static String ID = "id";
     public static String USER_ID = "userId";
     public static String TITLE = "title";
+    public static String ALBUM_ID = "albumId";
+    public static String URL = "url";
+    public static String THUMBNAIL_URL = "thumbnailUrl";
 }
