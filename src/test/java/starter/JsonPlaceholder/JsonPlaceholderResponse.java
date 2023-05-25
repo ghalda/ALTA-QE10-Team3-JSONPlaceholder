@@ -9,4 +9,5 @@ public class JsonPlaceholderResponse {
     public static String ALBUM_ID = "albumId";
     public static String URL = "url";
     public static String THUMBNAIL_URL = "thumbnailUrl";
+    public static String USER_NAME = "username";
 }

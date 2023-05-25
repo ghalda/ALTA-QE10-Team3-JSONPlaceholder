@@ -22,6 +22,10 @@ public class JsonPlaceholderAPI {
     public static String POST_CREATE_PHOTOS = Constant.BASE_URL+"/photos";
     public static String PUT_UPDATE_PHOTOS = Constant.BASE_URL+"/photos/{id}";
     public static String DELETE_SINGLE_PHOTOS = Constant.BASE_URL+"/photos/{id}";
+    public static String GET_SINGLE_USERS = Constant.BASE_URL + "/users/{id}";
+    public static String POST_CREATE_USERS = Constant.BASE_URL + "/users";
+    public static String PUT_UPDATE_USERS = Constant.BASE_URL + "/users/{id}";
+    public static String DELETE_USERS = Constant.BASE_URL + "/users/{id}";
 
     @Step("Get lists post")
     public void getListPost(Object page){
@@ -226,4 +230,80 @@ public void getSingleTodosValidParam(int id) {
     public void deletePhotosInvalidParamId(String id){
         SerenityRest.given().pathParam("id", id);
     }
+    ///Get single users
+    @Step("Get single users with valid parameter id ")
+    public void getSingleUsersValidParam(int id) {
+        SerenityRest.given().pathParam("id", id);
+    }
+
+    @Step("Get single users with invalid parameter id ")
+    public void getSingleUsersInvalidParam(String id) {
+        SerenityRest.given().pathParam("id", id);
+    }
+
+
+
+    //Post Users
+    @Step("Post Create users with valid bodyjson")
+    public void postCreateUsersValidReqBody(File json) {
+        SerenityRest.given()
+                .contentType(ContentType.JSON)
+                .body(json);
+    }
+
+    @Step("Post Create users with invalid reqbody name ")
+    public void postCreateUsersInvalidReqBodyName(File json) {
+        SerenityRest.given()
+                .contentType(ContentType.JSON)
+                .body(json);
+    }
+
+    @Step("Post Create users with invalid reqbody users username")
+    public void postCreateUsersInvalidReqBodyUsername(File json) {
+        SerenityRest.given()
+                .contentType(ContentType.JSON)
+                .body(json);
+    }
+
+    //Put Users
+    @Step("Put Update users with valid bodyjson")
+    public void putUpdateUsersValidIdAndValidReqbody(File json, int id) {
+        SerenityRest.given().pathParam("id", id)
+                .contentType(ContentType.JSON)
+                .body(json);
+    }
+
+    @Step(" Put Update users with invalid parameter id & valid reqbody")
+    public void putUpdateUsersInvalidIdAndValidReqbody(String id, File json) {
+        SerenityRest.given().pathParam("id", id)
+                .contentType(ContentType.JSON)
+                .body(json);
+    }
+
+    @Step("Put Update users with valid parameter id and without request body")
+    public void putUpdateUsersValidIdAndWithoutRequestBody(int id) {
+        SerenityRest.given().pathParam("id", id);
+    }
+
+    @Step("Put update users with exceed parameter id")
+    public void putUpdateUsersExceed(File json, int id) {
+        SerenityRest.given().pathParam("id", id)
+                .contentType(ContentType.JSON)
+                .body(json);
+    }
+
+    //Delete Users
+    @Step("Delete users with valid parameter id")
+    public void deleteUsersValidParamId(int id){
+        SerenityRest.given().pathParam("id", id);
+    }
+    @Step("Delete users with exceed parameter id")
+    public void deleteUsersExceedParamId(int id){
+        SerenityRest.given().pathParam("id", id);
+    }
+    @Step("Delete users with invalid parameter id")
+    public void deleteUsersInvalidParamId(String id){
+        SerenityRest.given().pathParam("id", id);
+    }
+
 }
