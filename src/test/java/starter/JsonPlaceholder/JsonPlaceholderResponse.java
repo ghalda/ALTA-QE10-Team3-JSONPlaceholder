@@ -11,4 +11,5 @@ public class JsonPlaceholderResponse {
     public static String THUMBNAIL_URL = "thumbnailUrl";
     public static String USER_NAME = "username";
     public static String BODY = "body";
+    public static String EMAIL = "email";
 }

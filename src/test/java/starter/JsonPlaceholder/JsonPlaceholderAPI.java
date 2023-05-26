@@ -298,7 +298,7 @@ public class JsonPlaceholderAPI {
                 .pathParam("id", id);
     }
 
-    //Get Posts
+    //Get List Posts
     @Step("Get posts")
     public void getListPosts(){
         SerenityRest.given();
@@ -324,6 +324,43 @@ public class JsonPlaceholderAPI {
     //Delete Post
     @Step("Delete posts")
     public void deletePosts(Object id){
+        SerenityRest.given()
+                .pathParam("id", id);
+    }
+
+    //Get Comments
+    @Step("Get comments")
+    public void getComments(Object id){
+        SerenityRest.given()
+                .pathParam("id", id);
+    }
+
+    //Get List Posts
+    @Step("Get comments")
+    public void getListComments(){
+        SerenityRest.given();
+    }
+
+    //Post Posts
+    @Step("Post comments")
+    public void postComments(File json){
+        SerenityRest.given()
+                .contentType(ContentType.JSON)
+                .body(json);
+    }
+
+    //Put Posts
+    @Step("Put comments")
+    public void putComments(Object id, File json){
+        SerenityRest.given()
+                .pathParam("id",id)
+                .contentType(ContentType.JSON)
+                .body(json);
+    }
+
+    //Delete Post
+    @Step("Delete comments")
+    public void deleteComments(Object id){
         SerenityRest.given()
                 .pathParam("id", id);
     }
