@@ -11,12 +11,13 @@ Feature: Put Users
       | 1  |
   @Testing
   Scenario Outline: Put Update users with invalid parameter id and valid reqbody
-    Given Put Update users with invalid parameter id <id> & valid reqbody
+    Given Put Update users with invalid parameter id "<id>" & valid reqbody
     When Send Put Update users
     Then Status code should be 400 Bad Request
     Examples:
-    |id |
-    |"@" |
+      | id |
+      | @  |
+
   @Testing
   Scenario Outline: Put Update users with valid parameter id and without request body
     Given Put Update users with valid parameter id <id> and without request body
@@ -26,7 +27,7 @@ Feature: Put Users
     |id |
     |1  |
     @Testing
-    Scenario Outline: Put update users with exceed parameter ID
+    Scenario Outline: Put update users with exceed parameter id
       Given Put update users with exceed parameter ID <id>
       When Send Put Update users
       Then Status code should be 404 Not Found

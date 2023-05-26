@@ -32,16 +32,15 @@ public class PutUsersStepDef {
     @Given("Put update users with exceed parameter ID {int}")
     public void putUpdateUsersWithExceedParameterID(int id) {
         File json = new File(Constant.REQ_BODY_DIR+"Users/PutUpdateUsersValidReqBody.json");
-        jsonPlaceholderAPI.putUpdateTodosExceed(json,id);
+        jsonPlaceholderAPI.putUpdateUsersWithExceedParameterID(json,id);
     }
-
 
     @When("Send Put Update users")
     public void sendPutUpdateUsers() {
         SerenityRest.when().put(JsonPlaceholderAPI.PUT_UPDATE_USERS);
     }
     @And("Validate users update JSON Schema")
-    public void validateUpdateUsersTodosJSONSchema() {
+    public void validateUpdateUsersJSONSchema() {
         File json = new File(Constant.JSON_SCHEMA_DIR+"Users/PutUpdateUsersJSONSchema.json");
         SerenityRest.and().body(JsonSchemaValidator.matchesJsonSchema(json));
     }

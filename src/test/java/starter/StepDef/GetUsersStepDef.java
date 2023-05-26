@@ -17,12 +17,12 @@ public class GetUsersStepDef {
 
     @Given("Get single users with valid parameter ID {int}")
     public void getSingleUsersWithValidParameterID(int id) {
-        jsonPlaceholderAPI.getSingleTodosValidParam(id);
+        jsonPlaceholderAPI.getSingleUsersValidParam(id);
     }
 
     @Given("Get single users with invalid parameter ID {string}")
     public void getSingleUsersWithInvalidParameterID(String id) {
-        jsonPlaceholderAPI.getSingleTodosInvalidParam(id);
+        jsonPlaceholderAPI.getSingleUsersInvalidParam(id);
     }
 
     @When("Send get single users")
