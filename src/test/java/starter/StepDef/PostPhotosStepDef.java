@@ -25,7 +25,7 @@ public class PostPhotosStepDef {
 
     @When("Send post create photos")
     public void sendPostCreatePhotos() {
-        SerenityRest.when().post(JsonPlaceholderAPI.POST_CREATE_PHOTOS);
+        SerenityRest.when().post(JsonPlaceholderAPI.LIST_PHOTOS);
     }
 
     @And("Response body for albumId should be {int}, title should be {string}, url should be {string} and thumbnailUrl should be {string}")
