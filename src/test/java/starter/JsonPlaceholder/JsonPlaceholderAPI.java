@@ -8,30 +8,19 @@ import starter.Utils.Constant;
 import java.io.File;
 
 public class JsonPlaceholderAPI {
-    public static String GET_LIST_POSTS = Constant.BASE_URL+ "/posts";
-    public static String GET_SINGLE_POST = Constant.BASE_URL+ "/posts/{id}";
-    public static String GET_SINGLE_ALBUMS = Constant.BASE_URL+"/albums/{id}";
-    public static String POST_CREATE_ALBUMS = Constant.BASE_URL+"/albums";
-    public static String PUT_UPDATE_ALBUMS = Constant.BASE_URL+"/albums/{id}";
-    public static String DELETE_SINGLE_ALBUMS = Constant.BASE_URL+"/albums/{id}";
-    public static String GET_SINGLE_TODOS = Constant.BASE_URL + "/todos/{id}";
-    public static String POST_CREATE_TODOS = Constant.BASE_URL + "/todos";
-    public static String PUT_UPDATE_TODOS = Constant.BASE_URL + "/todos/{id}";
-    public static String DELETE_TODOS = Constant.BASE_URL + "/todos/{id}";
-    public static String GET_SINGLE_PHOTOS = Constant.BASE_URL+"/photos/{id}";
-    public static String POST_CREATE_PHOTOS = Constant.BASE_URL+"/photos";
-    public static String PUT_UPDATE_PHOTOS = Constant.BASE_URL+"/photos/{id}";
-    public static String DELETE_SINGLE_PHOTOS = Constant.BASE_URL+"/photos/{id}";
-    public static String GET_SINGLE_USERS = Constant.BASE_URL + "/users/{id}";
-    public static String POST_CREATE_USERS = Constant.BASE_URL + "/users";
-    public static String PUT_UPDATE_USERS = Constant.BASE_URL + "/users/{id}";
-    public static String DELETE_USERS = Constant.BASE_URL + "/users/{id}";
+    public static String LIST_POSTS = Constant.BASE_URL+ "/posts";
+    public static String SINGLE_POST = Constant.BASE_URL+ "/posts/{id}";
+    public static String LIST_COMMENTS = Constant.BASE_URL+ "/comments";
+    public static String SINGLE_COMMENTS = Constant.BASE_URL+ "/comments/{id}";
+    public static String SINGLE_ALBUMS = Constant.BASE_URL+"/albums/{id}";
+    public static String LIST_ALBUMS = Constant.BASE_URL+"/albums";
+    public static String SINGLE_TODOS = Constant.BASE_URL + "/todos/{id}";
+    public static String LIST_TODOS = Constant.BASE_URL + "/todos";
+    public static String SINGLE_PHOTOS = Constant.BASE_URL+"/photos/{id}";
+    public static String LIST_PHOTOS = Constant.BASE_URL+"/photos";
+    public static String SINGLE_USERS = Constant.BASE_URL + "/users/{id}";
+    public static String LIST_USERS = Constant.BASE_URL + "/users";
 
-    @Step("Get lists post")
-    public void getListPost(Object page){
-        SerenityRest.given()
-                .pathParam("page", page);
-    }
     //Get single albums
     @Step("Get albums with valid parameter ID")
     public void getAlbumsValidParamId(int id){
