@@ -24,7 +24,7 @@ public class PutPhotosStepDef {
     }
     @When("Send put update photos")
     public void sendPutUpdatePhotos() {
-        SerenityRest.when().put(JsonPlaceholderAPI.PUT_UPDATE_PHOTOS);
+        SerenityRest.when().put(JsonPlaceholderAPI.SINGLE_PHOTOS);
     }
     @And("Response body update ID should be {int}, albumId should be {int}, title should be {string}, url should be {string} and thumbnailUrl should be {string}")
     public void responseBodyUpdateIDAlbumIdTitleUrlThumbnailUrl(int id, int albumId, String title, String url, String thumbnailUrl) {

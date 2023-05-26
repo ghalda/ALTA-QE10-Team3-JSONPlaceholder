@@ -26,7 +26,7 @@ public class GetAlbumsStepDef {
 
     @When("Send get albums")
     public void sendGetAlbums() {
-        SerenityRest.when().get(JsonPlaceholderAPI.GET_SINGLE_ALBUMS);
+        SerenityRest.when().get(JsonPlaceholderAPI.SINGLE_ALBUMS);
     }
 
     @Then("Status code should be {int} OK")

@@ -22,7 +22,7 @@ public class GetPhotosStepDef {
 
     @When("Send get photos")
     public void sendGetPhotos() {
-        SerenityRest.when().get(JsonPlaceholderAPI.GET_SINGLE_PHOTOS);
+        SerenityRest.when().get(JsonPlaceholderAPI.SINGLE_PHOTOS);
     }
 
     @And("Validate get photos JSON Schema")

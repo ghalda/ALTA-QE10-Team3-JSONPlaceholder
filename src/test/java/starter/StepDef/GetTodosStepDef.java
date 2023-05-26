@@ -26,7 +26,7 @@ public class GetTodosStepDef {
 
     @When("Send get single todos")
     public void sendGetSingleTodos() {
-        SerenityRest.when().get(JsonPlaceholderAPI.GET_SINGLE_TODOS);
+        SerenityRest.when().get(JsonPlaceholderAPI.SINGLE_TODOS);
     }
 
     @And("Validate get single todos JSON Schema")
@@ -42,7 +42,7 @@ public class GetTodosStepDef {
 
     @When("Send get single todos with invalid parameter id")
     public void sendGetSingleTodosWithInvalidParameterId() {
-        SerenityRest.when().get(JsonPlaceholderAPI.GET_SINGLE_TODOS);
+        SerenityRest.when().get(JsonPlaceholderAPI.SINGLE_TODOS);
     }
 }
 

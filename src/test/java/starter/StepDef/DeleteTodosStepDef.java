@@ -18,7 +18,7 @@ public class DeleteTodosStepDef {
 
     @When("Send Delete Todos")
     public void sendDeleteTodosWithValidId() {
-        SerenityRest.when().delete(JsonPlaceholderAPI.DELETE_TODOS);
+        SerenityRest.when().delete(JsonPlaceholderAPI.SINGLE_TODOS);
     }
 
     @Given("Delete Todos with invalid id {string}")
@@ -28,7 +28,7 @@ public class DeleteTodosStepDef {
 
     @When("Send Delete Todos with invalid id")
     public void sendDeleteTodosWithInvalidId() {
-        SerenityRest.when().delete(JsonPlaceholderAPI.DELETE_TODOS);
+        SerenityRest.when().delete(JsonPlaceholderAPI.SINGLE_TODOS);
     }
 
     @Given("Delete Todos with exceed parameter id {int}")
@@ -37,7 +37,7 @@ public class DeleteTodosStepDef {
     }
     @When("Send Delete Todos exceed parameter id")
     public void sendDeleteTodosExceedParameterId() {
-        SerenityRest.when().delete(JsonPlaceholderAPI.DELETE_TODOS);
+        SerenityRest.when().delete(JsonPlaceholderAPI.SINGLE_TODOS);
     }
 
 

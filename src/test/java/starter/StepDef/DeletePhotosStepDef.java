@@ -16,7 +16,7 @@ public class DeletePhotosStepDef {
     }
     @When("Send delete photos")
     public void sendDeletePhotos() {
-        SerenityRest.when().delete(JsonPlaceholderAPI.DELETE_SINGLE_PHOTOS);
+        SerenityRest.when().delete(JsonPlaceholderAPI.SINGLE_PHOTOS);
     }
     @Given("Delete photos with exceed parameter ID {int}")
     public void deletePhotosWithExceedParameterID(int id) {

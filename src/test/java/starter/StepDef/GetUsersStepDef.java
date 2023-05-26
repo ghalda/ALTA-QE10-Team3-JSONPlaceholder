@@ -27,7 +27,7 @@ public class GetUsersStepDef {
 
     @When("Send get single users")
     public void sendGetSingleUsers() {
-        SerenityRest.when().get(JsonPlaceholderAPI.GET_SINGLE_USERS);
+        SerenityRest.when().get(JsonPlaceholderAPI.SINGLE_USERS);
     }
 
     @And("Validate get users JSON Schema")
