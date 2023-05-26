@@ -1,14 +1,18 @@
 # API Automation Testing : JSON Placeholder
 
-This is API Automation Testing Project for JSON Placeholder (https://jsonplaceholder.typicode.com/). This project was created to complete a group project in the Batch 10 Quality Assurance class at the Alterra Academy Immersive Program. At this project, we perform an API Automation Testing for 6 resources or end point (Posts, Comments, Albums, Photos, Todos, and Users). Where each endpoints point out CREATE, READ, UPDATE, and DELETE.
+This is API Automation Testing Project for [JSON Placeholder](https://jsonplaceholder.typicode.com/). This project was created to complete a group project in the Batch 10 Quality Assurance class at the Alterra Academy Immersive Program. At this project, we perform an API Automation Testing for 6 resources or end point (Posts, Comments, Albums, Photos, Todos, and Users). Where each endpoints point out CREATE, READ, UPDATE, and DELETE.
 
 ## Test Docummentation
 https://docs.google.com/spreadsheets/d/1D8aTQCncp5rf_vo6AeKZ6DrHDPbSHN9TqLZPJw3CGqE/edit?usp=sharing
 
 ## Test Report
-
+![Test Report Overall](https://github.com/ghalda/ALTA-QE10-Team3-JSONPlaceholder/assets/71718700/29924a29-eb21-443b-889d-572ccfd32486)
 
 ## Test Coverage
+![image](https://github.com/ghalda/ALTA-QE10-Team3-JSONPlaceholder/assets/71718700/9d286837-f592-419b-8936-b4d0a18734db)
+![image](https://github.com/ghalda/ALTA-QE10-Team3-JSONPlaceholder/assets/71718700/ed3f2eb9-419a-4e14-b0e4-d953567cadff)
+![image](https://github.com/ghalda/ALTA-QE10-Team3-JSONPlaceholder/assets/71718700/ad655b55-580f-45e1-8bac-cdf647325b15)
+
 
 ## Tools & Tech Stack
 - [Java 8](https://www.oracle.com/java/technologies/downloads/#java8)
@@ -34,6 +38,6 @@ mvn clean verify
 
 
 ## Members
-- Ghalda Putri Balqis : https://github.com/ghalda
-- Titi Widiati Ningsih : https://github.com/titiwidiati
-- Derin Malsa : https://github.com/derin2024
+-  [Ghalda Putri Balqis](https://github.com/ghalda)
+-  [Titi Widiati Ningsih](https://github.com/titiwidiati)
+-  [Derin Malsa](https://github.com/derin2024)
