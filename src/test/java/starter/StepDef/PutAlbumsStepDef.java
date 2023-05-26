@@ -25,7 +25,7 @@ public class PutAlbumsStepDef {
 
     @When("Send put update albums")
     public void sendPutUpdateAlbums() {
-        SerenityRest.when().put(JsonPlaceholderAPI.PUT_UPDATE_ALBUMS);
+        SerenityRest.when().put(JsonPlaceholderAPI.SINGLE_ALBUMS);
     }
 
     @And("Response body update id should be {int}, userId was {int} and title was {string}")

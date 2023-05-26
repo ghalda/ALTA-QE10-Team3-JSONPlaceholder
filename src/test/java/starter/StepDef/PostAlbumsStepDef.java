@@ -26,7 +26,7 @@ public class PostAlbumsStepDef {
 
     @When("Send post create albums")
     public void sendPostCreateAlbums() {
-        SerenityRest.when().post(JsonPlaceholderAPI.POST_CREATE_ALBUMS);
+        SerenityRest.when().post(JsonPlaceholderAPI.LIST_ALBUMS);
     }
 
     @Then("Status code should be {int} Created")

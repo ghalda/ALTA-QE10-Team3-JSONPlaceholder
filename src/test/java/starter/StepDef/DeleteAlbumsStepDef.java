@@ -17,7 +17,7 @@ public class DeleteAlbumsStepDef {
 
     @When("Send delete albums")
     public void sendDeleteAlbums() {
-        SerenityRest.when().delete(JsonPlaceholderAPI.DELETE_SINGLE_ALBUMS);
+        SerenityRest.when().delete(JsonPlaceholderAPI.SINGLE_ALBUMS);
     }
 
     @Given("Delete albums with exceed parameter ID {int}")
