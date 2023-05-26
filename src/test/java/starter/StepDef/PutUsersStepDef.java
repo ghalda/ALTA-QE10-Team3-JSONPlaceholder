@@ -37,7 +37,7 @@ public class PutUsersStepDef {
 
     @When("Send Put Update users")
     public void sendPutUpdateUsers() {
-        SerenityRest.when().put(JsonPlaceholderAPI.PUT_UPDATE_USERS);
+        SerenityRest.when().put(JsonPlaceholderAPI.SINGLE_USERS);
     }
     @And("Validate users update JSON Schema")
     public void validateUpdateUsersJSONSchema() {

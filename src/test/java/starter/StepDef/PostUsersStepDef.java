@@ -43,7 +43,7 @@ public class PostUsersStepDef {
 
     @When("Send Post Create users")
     public void sendPostCreateUsers() {
-        SerenityRest.when().post(JsonPlaceholderAPI.POST_CREATE_USERS);
+        SerenityRest.when().post(JsonPlaceholderAPI.LIST_USERS);
     }
     @And("Validate Post Create users JSON Schema")
     public void validatePostCreateUsersJSONSchema() {

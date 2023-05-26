@@ -17,7 +17,7 @@ public class DeleteUsersStepDef {
 
     @When("Send Delete users")
     public void sendDeleteUsersWithValidId() {
-        SerenityRest.when().delete(JsonPlaceholderAPI.DELETE_USERS);
+        SerenityRest.when().delete(JsonPlaceholderAPI.SINGLE_USERS);
     }
 
     @Given("Delete Users with invalid parameter id {string}")
