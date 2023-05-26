@@ -20,7 +20,7 @@ public class PostUsersStepDef {
     @Given("Post Create users with valid bodyjson")
     public void postCreateUsersWithValidRequestBody() {
         File json = new File(Constant.REQ_BODY_DIR+"Users/PostCreateUsersValidReqBody.json");
-        jsonPlaceholderAPI.postCreateTodosValidReqBody(json);
+        jsonPlaceholderAPI.postCreateUsersValidReqBody(json);
     }
 
     @Given("Post Create users with invalid reqbody name")

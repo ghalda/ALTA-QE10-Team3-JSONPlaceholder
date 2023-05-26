@@ -28,9 +28,9 @@ Feature: Put Users
     |1  |
     @Testing
     Scenario Outline: Put update users with exceed parameter id
-      Given Put update users with exceed parameter ID <id>
-      When Send Put Update users
-      Then Status code should be 404 Not Found
-        Examples:
+    Given Put update users with exceed parameter ID <id>
+    When Send Put Update users
+    Then Status code should be 404 Not Found
+    Examples:
         |id |
         |11 |
