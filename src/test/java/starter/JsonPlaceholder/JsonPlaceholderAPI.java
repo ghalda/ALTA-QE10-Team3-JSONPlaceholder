@@ -103,20 +103,14 @@ public class JsonPlaceholderAPI {
     }
 
 //Get Todos
-@Step("Get single Todos with valid parameter id ")
-public void getSingleTodosValidParam(int id) {
+    @Step("Get single Todos with valid parameter id ")
+    public void getSingleTodosValidParam(int id) {
     SerenityRest.given().pathParam("id", id);
 }
 
     @Step("Get single Todos with invalid parameter id ")
     public void getSingleTodosInvalidParam(String id) {
         SerenityRest.given().pathParam("id", id);
-    }
-
-    @Step("Get single Todos with exceed parameter id ")
-    public void getSingleTodosExceedParam(int id) {
-        SerenityRest.given().pathParam("id", id);
-
     }
 
     //Post Create Todos
