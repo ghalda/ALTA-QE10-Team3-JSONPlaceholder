@@ -11,7 +11,8 @@ Feature: Get Posts
     Given Get single posts with valid parameter id <id>
     When Send get posts
     Then Status code should be 200 OK
-    And Response body field id, userId, title, body should be exist
+    And Response body posts ID should be <id>
+    And Validate get posts JSON Schema
   Examples:
     | id |
     | 1  |

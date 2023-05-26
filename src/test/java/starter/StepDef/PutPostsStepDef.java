@@ -13,7 +13,6 @@ import starter.Utils.Constant;
 import java.io.File;
 
 import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.Matchers.notNullValue;
 
 public class PutPostsStepDef {
     @Steps
@@ -35,7 +34,7 @@ public class PutPostsStepDef {
         SerenityRest.and().body(JsonSchemaValidator.matchesJsonSchema(json));
     }
 
-    @And("Response body id was {}, title was {string}, body was {string} and User Id was {}")
+    @And("Response body id was {int}, title was {string}, body was {string} and User Id was {int}")
     public void responseBodyIdWasTitleWasBodyWasAndUserIdWas(int id, String title, String body, int userId) {
         SerenityRest.and()
                 .body(JsonPlaceholderResponse.ID, equalTo(id))

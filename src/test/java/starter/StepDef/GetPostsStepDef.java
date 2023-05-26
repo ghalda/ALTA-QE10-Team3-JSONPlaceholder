@@ -3,12 +3,13 @@ package starter.StepDef;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
-import io.restassured.response.Response;
-import lombok.var;
+import io.restassured.module.jsv.JsonSchemaValidator;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Steps;
 import starter.JsonPlaceholder.JsonPlaceholderAPI;
 import starter.JsonPlaceholder.JsonPlaceholderResponse;
+import starter.Utils.Constant;
+import java.io.File;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.notNullValue;
@@ -37,8 +38,8 @@ public class GetPostsStepDef {
         SerenityRest.and()
                 .body(JsonPlaceholderResponse.ID, notNullValue())
                 .body(JsonPlaceholderResponse.USER_ID, notNullValue())
-                .and().body(JsonPlaceholderResponse.TITLE, notNullValue())
-                .and().body(JsonPlaceholderResponse.BODY, notNullValue());
+                .body(JsonPlaceholderResponse.TITLE, notNullValue())
+                .body(JsonPlaceholderResponse.BODY, notNullValue());
     }
 
     @Given("Get single posts with valid parameter id {int}")
@@ -59,5 +60,17 @@ public class GetPostsStepDef {
     @Given("Get single posts with exceed parameter id {int}")
     public void getSinglePostsWithExceedParameterId(int id) {
         jsonPlaceholderAPI.getPosts(id);
+    }
+
+    @And("Response body posts ID should be {int}")
+    public void responseBodyPostsIDShouldBe(int id) {
+        SerenityRest.and()
+                .body(JsonPlaceholderResponse.ID, equalTo(id));
+    }
+
+    @And("Validate get posts JSON Schema")
+    public void validateGetPostsJSONSchema() {
+        File json = new File(Constant.JSON_SCHEMA_DIR + "Posts/SuccessfulCreate.json");
+        SerenityRest.and().assertThat().body(JsonSchemaValidator.matchesJsonSchema(json));
     }
 }
