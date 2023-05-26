@@ -2,23 +2,19 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
-    "title": {
-      "type": "string"
-    },
-    "body": {
-      "type": "string"
-    },
     "userId": {
       "type": "integer"
     },
     "id": {
       "type": "integer"
+    },
+    "title": {
+      "type": "string"
     }
   },
   "required": [
-    "title",
-    "body",
     "userId",
-    "id"
+    "id",
+    "title"
   ]
 }
