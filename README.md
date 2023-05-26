@@ -2,8 +2,10 @@
 
 This is API Automation Testing Project for [JSON Placeholder](https://jsonplaceholder.typicode.com/). This project was created to complete a group project in the Batch 10 Quality Assurance class at the Alterra Academy Immersive Program. At this project, we perform an API Automation Testing for 6 resources or end point (Posts, Comments, Albums, Photos, Todos, and Users). Where each endpoints point out CREATE, READ, UPDATE, and DELETE.
 
+
 ## Test Docummentation
-https://docs.google.com/spreadsheets/d/1D8aTQCncp5rf_vo6AeKZ6DrHDPbSHN9TqLZPJw3CGqE/edit?usp=sharing
+- [Spreadsheet](https://docs.google.com/spreadsheets/d/1D8aTQCncp5rf_vo6AeKZ6DrHDPbSHN9TqLZPJw3CGqE/edit?usp=sharing)
+- [Postman Workspace](https://www.postman.com/group-3-json-placeholder/workspace/json-placeholder-group-3)
 
 ## Test Report
 ![Test Report Overall](https://github.com/ghalda/ALTA-QE10-Team3-JSONPlaceholder/assets/71718700/29924a29-eb21-443b-889d-572ccfd32486)
