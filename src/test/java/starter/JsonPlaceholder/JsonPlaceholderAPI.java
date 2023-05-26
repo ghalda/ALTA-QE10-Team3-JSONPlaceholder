@@ -9,7 +9,7 @@ import java.io.File;
 
 public class JsonPlaceholderAPI {
     public static String LIST_POSTS = Constant.BASE_URL+ "/posts";
-    public static String SINGLE_POST = Constant.BASE_URL+ "/posts/{id}";
+    public static String SINGLE_POSTS = Constant.BASE_URL+ "/posts/{id}";
     public static String LIST_COMMENTS = Constant.BASE_URL+ "/comments";
     public static String SINGLE_COMMENTS = Constant.BASE_URL+ "/comments/{id}";
     public static String SINGLE_ALBUMS = Constant.BASE_URL+"/albums/{id}";
@@ -280,13 +280,51 @@ public class JsonPlaceholderAPI {
     public void deleteUsersValidParamId(int id){
         SerenityRest.given().pathParam("id", id);
     }
+
     @Step("Delete users with exceed parameter id")
     public void deleteUsersExceedParamId(int id){
         SerenityRest.given().pathParam("id", id);
     }
+
     @Step("Delete users with invalid parameter id")
     public void deleteUsersInvalidParamId(String id){
         SerenityRest.given().pathParam("id", id);
     }
 
+    //Get Posts
+    @Step("Get posts")
+    public void getPosts(Object id){
+        SerenityRest.given()
+                .pathParam("id", id);
+    }
+
+    //Get Posts
+    @Step("Get posts")
+    public void getListPosts(){
+        SerenityRest.given();
+    }
+
+    //Post Posts
+    @Step("Post posts")
+    public void postPosts(File json){
+        SerenityRest.given()
+                .contentType(ContentType.JSON)
+                .body(json);
+    }
+
+    //Put Posts
+    @Step("Put posts")
+    public void putPosts(Object id, File json){
+        SerenityRest.given()
+                .pathParam("id",id)
+                .contentType(ContentType.JSON)
+                .body(json);
+    }
+
+    //Delete Post
+    @Step("Delete posts")
+    public void deletePosts(Object id){
+        SerenityRest.given()
+                .pathParam("id", id);
+    }
 }
