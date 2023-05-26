@@ -20,7 +20,7 @@ public class PutPhotosStepDef {
     @Given("Put update photos with valid json and parameter ID {int}")
     public void putUpdatePhotosValidJsonAndId(int id){
         File json = new File(Constant.REQ_BODY_DIR+"Photos/PutPhotosValidBody.json");
-        jsonPlaceholderAPI.putUpdateAlbumsValidJsonAndId(id, json);
+        jsonPlaceholderAPI.putUpdatePhotosValidJsonAndId(id, json);
     }
     @When("Send put update photos")
     public void sendPutUpdatePhotos() {
