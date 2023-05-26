@@ -51,13 +51,13 @@ public class GetPostsStepDef {
         SerenityRest.when().get(JsonPlaceholderAPI.SINGLE_POSTS);
     }
 
-    @Given("Get posts with invalid parameter ID {string}")
-    public void getPostsWithInvalidParameterID(String id) {
+    @Given("Get single posts with invalid parameter id {string}")
+    public void getSinglePostsWithInvalidParameterId(String id) {
         jsonPlaceholderAPI.getPosts(id);
     }
 
-    @Given("Get posts with exceed parameter ID {int}")
-    public void getPostsWithExceedParameterID(int id) {
+    @Given("Get single posts with exceed parameter id {int}")
+    public void getSinglePostsWithExceedParameterId(int id) {
         jsonPlaceholderAPI.getPosts(id);
     }
 }
