@@ -26,7 +26,7 @@ public class PutTodosStepDef {
 
     @When("Send Put Update Todos")
     public void sendPutUpdateTodos() {
-        SerenityRest.when().put(JsonPlaceholderAPI.PUT_UPDATE_TODOS);
+        SerenityRest.when().put(JsonPlaceholderAPI.SINGLE_TODOS);
     }
 
     @And("Response body title should be user id {int} and title {string}")
@@ -48,7 +48,7 @@ public class PutTodosStepDef {
 
     @When("Send put update todos exceed parameter ID")
     public void sendPutUpdateTodosExceedParameterID() {
-        SerenityRest.when().put(JsonPlaceholderAPI.PUT_UPDATE_TODOS);
+        SerenityRest.when().put(JsonPlaceholderAPI.SINGLE_TODOS);
     }
 
     @Given("Put Update Todos with invalid id {string} & valid reqbody")
@@ -59,7 +59,7 @@ public class PutTodosStepDef {
 
     @When("Send Put Update Todos with invalid id & valid reqbody")
     public void sendPutUpdateTodosWithInvalidIdValidReqbody() {
-        SerenityRest.when().put(JsonPlaceholderAPI.PUT_UPDATE_TODOS);
+        SerenityRest.when().put(JsonPlaceholderAPI.SINGLE_TODOS);
     }
 
     @Given("Put Update Todos with invalid reqbody title and valid id {int}")
@@ -69,7 +69,7 @@ public class PutTodosStepDef {
     }
     @When("Send Put Update Todos with invalid reqbody title and valid id")
     public void sendPutUpdateTodosWithInvalidReqbodyTitle() {
-        SerenityRest.when().put(JsonPlaceholderAPI.PUT_UPDATE_TODOS);
+        SerenityRest.when().put(JsonPlaceholderAPI.SINGLE_TODOS);
     }
 
 

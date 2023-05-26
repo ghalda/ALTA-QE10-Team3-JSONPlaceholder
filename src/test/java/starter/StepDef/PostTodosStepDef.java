@@ -27,7 +27,7 @@ public class PostTodosStepDef {
 
     @When("Send Post Create Todos")
     public void sendPostCreateTodos() {
-        SerenityRest.when().post(JsonPlaceholderAPI.POST_CREATE_TODOS);
+        SerenityRest.when().post(JsonPlaceholderAPI.LIST_TODOS);
     }
 
     @And("Response body for userId {int} and  title should be {string}")
@@ -56,7 +56,7 @@ public class PostTodosStepDef {
 
     @When("Send Post Create Todos with invalid reqbody userId")
     public void sendPostCreateTodosWithInvalidReqbodyUserId() {
-        SerenityRest.when().post(JsonPlaceholderAPI.POST_CREATE_TODOS);
+        SerenityRest.when().post(JsonPlaceholderAPI.LIST_TODOS);
     }
 
 }
