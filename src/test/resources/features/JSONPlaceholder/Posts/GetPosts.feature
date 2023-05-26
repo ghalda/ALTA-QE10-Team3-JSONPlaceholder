@@ -16,7 +16,7 @@ Feature: Get Posts
     | id |
     | 1  |
 
-  @Testing @PositiveCase
+  @Testing @NegativeCase
   Scenario Outline: Get single post with invalid parameter id
     Given Get single posts with invalid parameter id "<id>"
     When Send get posts
@@ -26,7 +26,7 @@ Feature: Get Posts
       | a  |
       | @  |
 
-  @Testing @PositiveCase
+  @Testing @NegativeCase
   Scenario Outline: Get single post with exceed parameter id
     Given Get single posts with exceed parameter id <id>
     When Send get posts
